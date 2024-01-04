@@ -1,0 +1,108 @@
+/* Google Font (Big Shoulder Display & Lexend Deca) */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright_orange: hsl(31, 77%, 52%);
+  --dark_cyan: hsl(184, 100%, 22%);
+  --very_dark_cyan: hsl(179, 100%, 13%);
+  --transparent_white: hsla(0, 0%, 100%, 0.75);
+  --very_light_gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  background: var(--very_light_gray);
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 480px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card {
+  padding: 4rem 4rem 1rem 3.1rem;
+  color: var(--very_light_gray);
+}
+.card h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 35px;
+  margin: 20px 0;
+}
+.card p {
+  margin-bottom: 6.5rem;
+  display: block;
+}
+.card-1 {
+  background-color: var(--bright_orange);
+}
+.card-2 {
+  background-color: var(--dark_cyan);
+}
+.card-3 {
+  background-color: var(--very_dark_cyan);
+}
+.card a {
+  text-decoration: none;
+}
+.card .btn {
+  background-color: var(--very_light_gray);
+  padding: 12px 25px;
+  text-transform: capitalize;
+  border-radius: 3rem;
+}
+.orange-btn {
+  color: var(--bright_orange);
+}
+.dark_cyn-btn {
+  color: var(--dark_cyan);
+}
+.very_dark_cyan-btn {
+  color: var(--very_dark_cyan);
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    padding: 3rem;
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .card p {
+    margin-bottom: 3rem;
+  }
+  .card {
+    padding: 1rem 1rem 0rem 2.1rem;
+    min-height: 320px;
+  }
+  .card .btn {
+    margin-bottom: 0rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    padding: 3rem;
+  }
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card {
+    min-height: 350px;
+  }
+}
